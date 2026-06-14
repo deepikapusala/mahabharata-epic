@@ -1,7 +1,9 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { CHAPTERS_DATA, TITLES_BY_SCORE, getChapter } from "@/lib/mahabharata-data";
+import { CHAPTER_NARRATIONS } from "@/lib/mahabharata-narrations";
 import { ChapterEffects } from "@/components/ChapterEffects";
+import { ListenButton } from "@/components/ListenButton";
 
 export const Route = createFileRoute("/explore/$chapterId")({
   head: ({ params }) => {
@@ -192,6 +194,7 @@ function ExplorePage() {
             whatsappHref={whatsappHref}
             linkedinHref={linkedinHref}
             shareText={`${shareText} ${shareUrl}`}
+            narration={CHAPTER_NARRATIONS[chapter.id] ?? ""}
             onRestart={restart}
           />
         )}
@@ -232,6 +235,7 @@ function Result({
   whatsappHref,
   linkedinHref,
   shareText,
+  narration,
   onRestart,
 }: {
   score: number;
@@ -242,6 +246,7 @@ function Result({
   whatsappHref: string;
   linkedinHref: string;
   shareText: string;
+  narration: string;
   onRestart: () => void;
 }) {
   const [copied, setCopied] = useState(false);
@@ -276,6 +281,13 @@ function Result({
               : "Every reading reveals more. Walk the path again."}
           </p>
 
+          {narration && (
+            <div className="mt-9">
+              <div className="font-display tracking-[0.4em] text-[10px] uppercase text-amber-200/70 mb-3">Hear the Story</div>
+              <ListenButton text={narration} />
+            </div>
+          )}
+
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
             <button
               type="button"
@@ -288,7 +300,7 @@ function Result({
               to="/"
               className="px-6 py-3 border border-amber-200/30 bg-white/5 font-display tracking-[0.4em] text-xs uppercase text-amber-100/90 hover:bg-white/10 transition"
             >
-              Back to Epic
+              Continue Journey
             </Link>
           </div>
 
