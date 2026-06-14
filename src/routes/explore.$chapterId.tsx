@@ -139,7 +139,7 @@ function ExplorePage() {
                 </h2>
 
                 <ul className="space-y-3">
-                  {q.options.map((opt, i) => {
+                  {q.options.map((opt: string, i: number) => {
                     const isCorrect = i === q.answer;
                     const isSelected = selected === i;
                     let cls = "border-amber-200/20 bg-white/5 hover:bg-amber-200/10 hover:border-amber-200/60";
