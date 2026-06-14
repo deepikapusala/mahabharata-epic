@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -195,6 +195,18 @@ function ChapterSection({ chapter, index }: { chapter: Chapter; index: number })
           <p className="mt-5 md:mt-6 font-display italic text-lg md:text-2xl text-amber-50/90 max-w-xl">
             {chapter.subtitle}
           </p>
+          <div className={`mt-8 md:mt-10 flex ${align === "right" ? "justify-end" : align === "center" ? "justify-center" : "justify-start"}`}>
+            <Link
+              to="/explore/$chapterId"
+              params={{ chapterId: `ch${index + 1}` }}
+              className="group relative inline-flex items-center gap-3 px-8 py-3 md:px-10 md:py-4 border border-amber-300/60 bg-amber-200/5 backdrop-blur-md font-display tracking-[0.4em] text-xs md:text-sm uppercase text-amber-100 hover:bg-amber-200/15 hover:border-amber-200 transition-all duration-500 overflow-hidden"
+              aria-label={`Explore ${chapter.title}`}
+            >
+              <span className="absolute inset-0 bg-gradient-to-r from-transparent via-amber-200/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+              <span className="relative">Explore</span>
+              <span className="relative text-amber-300">→</span>
+            </Link>
+          </div>
         </div>
       </div>
 
