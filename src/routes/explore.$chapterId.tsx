@@ -241,7 +241,7 @@ function Result({
   score: number;
   total: number;
   title: string;
-  chapter: { num: string; title: string };
+  chapter: { id: string; num: string; title: string };
   isHighScore: boolean;
   whatsappHref: string;
   linkedinHref: string;
@@ -284,7 +284,7 @@ function Result({
           {narration && (
             <div className="mt-9">
               <div className="font-display tracking-[0.4em] text-[10px] uppercase text-amber-200/70 mb-3">Hear the Story</div>
-              <ListenButton text={narration} />
+              <ListenButton chapterId={chapter.id} />
             </div>
           )}
 
