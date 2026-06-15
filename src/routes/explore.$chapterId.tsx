@@ -241,7 +241,7 @@ function Result({
   score: number;
   total: number;
   title: string;
-  chapter: { num: string; title: string };
+  chapter: { id: string; num: string; title: string };
   isHighScore: boolean;
   whatsappHref: string;
   linkedinHref: string;
