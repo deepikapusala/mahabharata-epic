@@ -362,6 +362,12 @@ function Ending() {
         <p className="mt-8 font-display italic text-lg md:text-2xl text-amber-50/80 max-w-xl">
           Where there is Dharma, there is Victory.
         </p>
+        <Link
+          to="/avatar"
+          className="mt-10 inline-flex items-center gap-3 px-7 py-3.5 rounded-full border border-amber-300/70 bg-amber-200/10 backdrop-blur-md font-display tracking-[0.4em] text-[11px] uppercase text-amber-100 hover:bg-amber-200/20 transition shadow-[0_0_40px_rgba(233,181,88,0.3)]"
+        >
+          ✦ Discover Your Avatar
+        </Link>
       </div>
     </section>
   );
