@@ -69,7 +69,7 @@ function ExplorePage() {
     () => getQuestionsForAttempt(chapter.id, attempt),
     [chapter.id, attempt],
   );
-  void getSetLabel(attempt);
+  
 
   const total = questions.length;
   const q = questions[current];
