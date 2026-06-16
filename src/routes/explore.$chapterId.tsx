@@ -1,9 +1,10 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { CHAPTERS_DATA, TITLES_BY_SCORE, getChapter } from "@/lib/mahabharata-data";
 import { CHAPTER_NARRATIONS } from "@/lib/mahabharata-narrations";
 import { ChapterEffects } from "@/components/ChapterEffects";
 import { ListenButton } from "@/components/ListenButton";
+import { getQuestionsForAttempt } from "@/lib/mahabharata-questions";
 
 export const Route = createFileRoute("/explore/$chapterId")({
   head: ({ params }) => {
@@ -43,14 +44,35 @@ export const Route = createFileRoute("/explore/$chapterId")({
 
 function ExplorePage() {
   const { chapter } = Route.useLoaderData();
+  const storageKey = `mb-quiz-attempt-${chapter.id}`;
+  const [attempt, setAttempt] = useState(0);
   const [current, setCurrent] = useState(0);
   const [score, setScore] = useState(0);
   const [answered, setAnswered] = useState(false);
   const [selected, setSelected] = useState<number | null>(null);
   const [finished, setFinished] = useState(false);
 
-  const total = chapter.questions.length;
-  const q = chapter.questions[current];
+  // Load persisted attempt index per chapter on mount/chapter change
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const raw = window.localStorage.getItem(storageKey);
+    const n = raw ? parseInt(raw, 10) : 0;
+    setAttempt(Number.isFinite(n) && n >= 0 ? n : 0);
+    setCurrent(0);
+    setScore(0);
+    setAnswered(false);
+    setSelected(null);
+    setFinished(false);
+  }, [chapter.id, storageKey]);
+
+  const questions = useMemo(
+    () => getQuestionsForAttempt(chapter.id, attempt),
+    [chapter.id, attempt],
+  );
+  
+
+  const total = questions.length;
+  const q = questions[current];
 
   const titleEarned = useMemo(() => TITLES_BY_SCORE[score] ?? TITLES_BY_SCORE[0], [score]);
 
@@ -72,6 +94,12 @@ function ExplorePage() {
   }
 
   function restart() {
+    // Advance to next set (Easy → Medium → Hard → Easy ...) per chapter
+    const nextAttempt = attempt + 1;
+    if (typeof window !== "undefined") {
+      window.localStorage.setItem(storageKey, String(nextAttempt));
+    }
+    setAttempt(nextAttempt);
     setCurrent(0);
     setScore(0);
     setAnswered(false);
