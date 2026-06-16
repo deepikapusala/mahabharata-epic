@@ -1,9 +1,10 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { CHAPTERS_DATA, TITLES_BY_SCORE, getChapter } from "@/lib/mahabharata-data";
 import { CHAPTER_NARRATIONS } from "@/lib/mahabharata-narrations";
 import { ChapterEffects } from "@/components/ChapterEffects";
 import { ListenButton } from "@/components/ListenButton";
+import { getQuestionsForAttempt, getSetLabel } from "@/lib/mahabharata-questions";
 
 export const Route = createFileRoute("/explore/$chapterId")({
   head: ({ params }) => {
