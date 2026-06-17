@@ -146,6 +146,7 @@ function MahabharataPage() {
           <ChapterSection key={i} chapter={c} index={i} />
         ))}
         <Ending />
+        <KrishnaEpilogue />
       </main>
     </div>
   );
