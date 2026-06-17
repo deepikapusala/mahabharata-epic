@@ -11,6 +11,7 @@ import ch5 from "@/assets/mahabharata/ch5.png.asset.json";
 import ch6 from "@/assets/mahabharata/ch6.png.asset.json";
 import ch7 from "@/assets/mahabharata/ch7.png.asset.json";
 import ch8 from "@/assets/mahabharata/ch8.png.asset.json";
+import KrishnaEpilogue from "@/components/KrishnaEpilogue";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -146,6 +147,7 @@ function MahabharataPage() {
           <ChapterSection key={i} chapter={c} index={i} />
         ))}
         <Ending />
+        <KrishnaEpilogue />
       </main>
     </div>
   );
