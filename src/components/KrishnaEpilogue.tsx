@@ -65,7 +65,7 @@ const SLIDES: Slide[] = [
     subtitle: "Every avatar has a purpose. Every purpose has an end.\nWhen Krishna's work was complete, he prepared to leave the mortal world.\nThe age had changed. But his teachings remained.\nHis body departed. His presence never did.",
   },
   {
-    type: "image", src: undefined,
+    type: "image", src: jagannath.url,
     title: "He Never Left",
     subtitle: "Krishna never truly left.\nAcross centuries, across generations, devotion continued.\nIn temples. In songs. In stories. In hearts.\nToday, millions worship him as Jagannath — The Lord of the Universe.",
   },
