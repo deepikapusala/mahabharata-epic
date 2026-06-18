@@ -130,7 +130,7 @@ function ExplorePage() {
       </div>
 
       {/* Top bar */}
-      <header className="relative z-20 flex items-center justify-between px-6 md:px-12 py-6">
+      <header className="relative z-20 flex items-center justify-between px-6 md:px-12 pt-10 pb-6 md:pt-12">
         <Link
           to="/"
           className="font-display tracking-[0.4em] text-xs uppercase text-amber-200/80 hover:text-amber-100"

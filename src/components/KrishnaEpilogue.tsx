@@ -175,7 +175,7 @@ export default function KrishnaEpilogue() {
         <div className="fixed inset-0 z-[100] liquid-modal flex flex-col">
           <Particles count={50} />
           {/* Header */}
-          <div className="relative z-20 flex items-center justify-between px-5 md:px-10 py-5">
+          <div className="relative z-20 flex items-center justify-between pl-5 md:pl-10 pr-20 md:pr-24 py-5">
             <div className="font-display tracking-[0.4em] text-[10px] md:text-xs text-cyan-100/70 uppercase">
               {String(idx + 1).padStart(2, "0")} / {String(SLIDES.length).padStart(2, "0")}
             </div>
