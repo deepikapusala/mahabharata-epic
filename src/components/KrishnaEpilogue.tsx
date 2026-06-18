@@ -9,6 +9,7 @@ import draupadi from "@/assets/krishna/draupadivastra.png.asset.json";
 import trueForm from "@/assets/krishna/KrishnaTrueForm.mp4.asset.json";
 import vishnu from "@/assets/krishna/LordVishnu.jpg.asset.json";
 import endDwaraka from "@/assets/krishna/EndofDwaraka.mp4.asset.json";
+import jagannath from "@/assets/krishna/PuriJagannathPic.jpg.asset.json";
 
 type Slide = {
   type: "image" | "video" | "final";
