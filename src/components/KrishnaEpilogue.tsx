@@ -88,11 +88,18 @@ function TypingText({ text, className }: { text: string; className?: string }) {
     }, 24);
     return () => window.clearInterval(id);
   }, [text]);
+  // Render the full text invisibly to reserve final height; overlay the
+  // currently-typed text absolutely so the container never reflows.
   return (
-    <p className={className} style={{ whiteSpace: "pre-line" }}>
-      {shown}
-      <span className="inline-block w-[2px] h-[1em] align-[-0.15em] ml-1 bg-cyan-200/80 animate-pulse" />
-    </p>
+    <div className="relative w-full">
+      <p className={className} style={{ whiteSpace: "pre-line", visibility: "hidden" }} aria-hidden="true">
+        {text}
+      </p>
+      <p className={className} style={{ whiteSpace: "pre-line", position: "absolute", inset: 0 }}>
+        {shown}
+        <span className="inline-block w-[2px] h-[1em] align-[-0.15em] ml-1 bg-cyan-200/80 animate-pulse" />
+      </p>
+    </div>
   );
 }
 
