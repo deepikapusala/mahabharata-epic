@@ -51,6 +51,14 @@
   text-shadow: 0 0 60px rgba(233, 181, 88, 0.25);
 }
 
+@utility text-nebula-gradient {
+  background: linear-gradient(180deg, #e8d5f2 0%, #b388eb 30%, #d4a843 65%, #a06a1f 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 60px rgba(179, 136, 235, 0.3);
+}
+
 @utility chapter-vignette {
   background: radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,0.55) 80%, rgba(0,0,0,0.85) 100%);
 }
