@@ -213,7 +213,7 @@ export default function KrishnaEpilogue() {
                 <div className="relative w-full aspect-video max-h-[55vh] rounded-3xl liquid-panel flex items-center justify-center overflow-hidden">
                   <Particles count={30} />
                   <div className="font-display text-cyan-100/90 text-3xl md:text-5xl tracking-[0.3em] relative z-10">
-                    ॥ कृष्ण ॥
+                    ॥ राधाकृष्ण ॥
                   </div>
                 </div>
               ) : slide.type === "video" ? (
