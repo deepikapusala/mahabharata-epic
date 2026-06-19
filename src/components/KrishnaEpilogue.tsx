@@ -251,21 +251,6 @@ export default function KrishnaEpilogue() {
                 />
               </div>
 
-              {idx === last && (
-                <button
-                  onClick={triggerRipple}
-                  className="liquid-btn relative mt-2 px-8 py-4 rounded-full font-display tracking-[0.3em] text-cyan-50 text-sm md:text-base overflow-hidden"
-                >
-                  <span className="relative z-10">🦚 RadhaKrishna 🦚</span>
-                  {ripples.map((r) => (
-                    <span
-                      key={r.id}
-                      className="ripple"
-                      style={{ left: r.x, top: r.y }}
-                    />
-                  ))}
-                </button>
-              )}
             </div>
           </div>
 
