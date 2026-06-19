@@ -213,7 +213,7 @@ export default function KrishnaEpilogue() {
                 <div className="relative w-full aspect-video max-h-[55vh] rounded-3xl liquid-panel flex items-center justify-center overflow-hidden">
                   <Particles count={30} />
                   <div className="font-display text-cyan-100/90 text-3xl md:text-5xl tracking-[0.3em] relative z-10">
-                    ॥ कृष्ण ॥
+                    ॥ राधाकृष्ण ॥
                   </div>
                 </div>
               ) : slide.type === "video" ? (
@@ -251,21 +251,6 @@ export default function KrishnaEpilogue() {
                 />
               </div>
 
-              {idx === last && (
-                <button
-                  onClick={triggerRipple}
-                  className="liquid-btn relative mt-2 px-8 py-4 rounded-full font-display tracking-[0.3em] text-cyan-50 text-sm md:text-base overflow-hidden"
-                >
-                  <span className="relative z-10">🦚 RadhaKrishna 🦚</span>
-                  {ripples.map((r) => (
-                    <span
-                      key={r.id}
-                      className="ripple"
-                      style={{ left: r.x, top: r.y }}
-                    />
-                  ))}
-                </button>
-              )}
             </div>
           </div>
 
