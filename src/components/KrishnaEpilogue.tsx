@@ -20,7 +20,7 @@ type Slide = {
 
 const SLIDES: Slide[] = [
   {
-    type: "image", src: birth.url,
+    type: "video", src: birth.url,
     title: "The Night Destiny Arrived",
     subtitle: "In the prison of Mathura, beneath storm-filled skies, Devaki gave birth to a child unlike any other.\nChains broke. Doors opened. Guards fell asleep. The Yamuna parted.\nDestiny had arrived. Krishna was born.",
   },
