@@ -1,13 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 import puppeteer from "@/assets/krishna/KrishnaThePuppeteer.png.asset.json";
-import birth from "@/assets/krishna/KrishnaBirth.jpg.asset.json";
+import birth from "@/assets/krishna/KrishnaBirthVideo.mp4.asset.json";
 import lilEyes from "@/assets/krishna/Krishna_s_eyes.mp4.asset.json";
-import kali from "@/assets/krishna/kalimardana.png.asset.json";
-import love from "@/assets/krishna/KrishnaLove.jpg.asset.json";
+import kali from "@/assets/krishna/VishnuSnakeDance.mp4.asset.json";
+import love from "@/assets/krishna/KrishnaLoveVideo.mp4.asset.json";
 import dwaraka from "@/assets/krishna/krishnaleavingmathuratodwaraka.png.asset.json";
 import draupadi from "@/assets/krishna/draupadivastra.png.asset.json";
 import trueForm from "@/assets/krishna/KrishnaTrueForm.mp4.asset.json";
-import vishnu from "@/assets/krishna/LordVishnu.jpg.asset.json";
+import vishnu from "@/assets/krishna/LordVishnuVideo.mp4.asset.json";
 import endDwaraka from "@/assets/krishna/EndofDwaraka.mp4.asset.json";
 import jagannath from "@/assets/krishna/PuriJagannathPic.jpg.asset.json";
 
@@ -20,7 +20,7 @@ type Slide = {
 
 const SLIDES: Slide[] = [
   {
-    type: "image", src: birth.url,
+    type: "video", src: birth.url,
     title: "The Night Destiny Arrived",
     subtitle: "In the prison of Mathura, beneath storm-filled skies, Devaki gave birth to a child unlike any other.\nChains broke. Doors opened. Guards fell asleep. The Yamuna parted.\nDestiny had arrived. Krishna was born.",
   },
@@ -30,12 +30,12 @@ const SLIDES: Slide[] = [
     subtitle: "To the world, he was God. To Yashoda, he was simply her son.\nHe stole butter. Played pranks. Filled every home with laughter.\nYet hidden behind those innocent eyes was the Supreme Being Himself.",
   },
   {
-    type: "image", src: kali.url,
+    type: "video", src: kali.url,
     title: "The Conqueror of Fear",
     subtitle: "The poisonous serpent Kaliya ruled the waters with terror. Villagers feared even approaching the river.\nBut Krishna entered without hesitation. Upon the serpent's hood, he danced.\nNot to destroy. But to restore harmony.",
   },
   {
-    type: "image", src: love.url,
+    type: "video", src: love.url,
     title: "Love Beyond Time",
     subtitle: "Some relationships are written in history. Others are written in eternity.\nRadha and Krishna were never bound by worldly definitions.\nTheir bond became the symbol of devotion itself. A love beyond possession. A love beyond time.",
   },
@@ -55,7 +55,7 @@ const SLIDES: Slide[] = [
     subtitle: "Arjuna asked. Krishna answered. The universe unfolded.\nCountless forms. Countless worlds. Countless destinies.\nFor a brief moment, Arjuna saw reality itself. This was the Vishwarupa — the true form of the Divine.",
   },
   {
-    type: "image", src: vishnu.url,
+    type: "video", src: vishnu.url,
     title: "Before Krishna",
     subtitle: "When Dharma declines and darkness rises, the universe seeks balance.\nAcross the ages, one force returns again and again to protect righteousness.\nThat force is Narayana — the preserver of creation, the eternal Lord Vishnu.\nIn Dwapara Yuga, he descended once more. This time… as Krishna.",
   },
