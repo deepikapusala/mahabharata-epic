@@ -12,6 +12,7 @@ import ch6 from "@/assets/mahabharata/ch6.png.asset.json";
 import ch7 from "@/assets/mahabharata/ch7.png.asset.json";
 import ch8 from "@/assets/mahabharata/ch8.png.asset.json";
 import KrishnaEpilogue from "@/components/KrishnaEpilogue";
+import WisdomTech from "@/components/WisdomTech";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -148,6 +149,7 @@ function MahabharataPage() {
         ))}
         <Ending />
         <KrishnaEpilogue />
+        <WisdomTech />
       </main>
     </div>
   );
