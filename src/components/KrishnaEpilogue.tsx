@@ -1,13 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 import puppeteer from "@/assets/krishna/KrishnaThePuppeteer.png.asset.json";
-import birth from "@/assets/krishna/KrishnaBirth.jpg.asset.json";
+import birth from "@/assets/krishna/KrishnaBirthVideo.mp4.asset.json";
 import lilEyes from "@/assets/krishna/Krishna_s_eyes.mp4.asset.json";
-import kali from "@/assets/krishna/kalimardana.png.asset.json";
-import love from "@/assets/krishna/KrishnaLove.jpg.asset.json";
+import kali from "@/assets/krishna/VishnuSnakeDance.mp4.asset.json";
+import love from "@/assets/krishna/KrishnaLoveVideo.mp4.asset.json";
 import dwaraka from "@/assets/krishna/krishnaleavingmathuratodwaraka.png.asset.json";
 import draupadi from "@/assets/krishna/draupadivastra.png.asset.json";
 import trueForm from "@/assets/krishna/KrishnaTrueForm.mp4.asset.json";
-import vishnu from "@/assets/krishna/LordVishnu.jpg.asset.json";
+import vishnu from "@/assets/krishna/LordVishnuVideo.mp4.asset.json";
 import endDwaraka from "@/assets/krishna/EndofDwaraka.mp4.asset.json";
 import jagannath from "@/assets/krishna/PuriJagannathPic.jpg.asset.json";
 
