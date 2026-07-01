@@ -188,7 +188,7 @@ function ChapterSection({ chapter, index }: { chapter: Chapter; index: number })
           <div className="font-display text-[11px] md:text-xs tracking-[0.6em] text-amber-200/80 uppercase mb-4 md:mb-6">
             Chapter {chapter.num}
           </div>
-          <h2 className={`font-display ${index === 0 ? "text-nebula-gradient" : "text-gold-gradient"} text-5xl sm:text-6xl md:text-8xl lg:text-9xl leading-[0.95] uppercase`}>
+          <h2 className={`font-display ${index === 0 ? "text-royal-crimson-gradient" : index === 4 ? "text-divine-indigo-gradient" : index === 5 ? "text-cosmic-gold-gradient" : "text-gold-gradient"} text-5xl sm:text-6xl md:text-8xl lg:text-9xl leading-[0.95] uppercase`}>
             {chapter.title}
           </h2>
           <div className={`mt-6 md:mt-8 flex ${align === "right" ? "justify-end" : align === "center" ? "justify-center" : "justify-start"}`}>
