@@ -30,12 +30,12 @@ const SLIDES: Slide[] = [
     subtitle: "To the world, he was God. To Yashoda, he was simply her son.\nHe stole butter. Played pranks. Filled every home with laughter.\nYet hidden behind those innocent eyes was the Supreme Being Himself.",
   },
   {
-    type: "image", src: kali.url,
+    type: "video", src: kali.url,
     title: "The Conqueror of Fear",
     subtitle: "The poisonous serpent Kaliya ruled the waters with terror. Villagers feared even approaching the river.\nBut Krishna entered without hesitation. Upon the serpent's hood, he danced.\nNot to destroy. But to restore harmony.",
   },
   {
-    type: "image", src: love.url,
+    type: "video", src: love.url,
     title: "Love Beyond Time",
     subtitle: "Some relationships are written in history. Others are written in eternity.\nRadha and Krishna were never bound by worldly definitions.\nTheir bond became the symbol of devotion itself. A love beyond possession. A love beyond time.",
   },
