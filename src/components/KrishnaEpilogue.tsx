@@ -55,7 +55,7 @@ const SLIDES: Slide[] = [
     subtitle: "Arjuna asked. Krishna answered. The universe unfolded.\nCountless forms. Countless worlds. Countless destinies.\nFor a brief moment, Arjuna saw reality itself. This was the Vishwarupa — the true form of the Divine.",
   },
   {
-    type: "image", src: vishnu.url,
+    type: "video", src: vishnu.url,
     title: "Before Krishna",
     subtitle: "When Dharma declines and darkness rises, the universe seeks balance.\nAcross the ages, one force returns again and again to protect righteousness.\nThat force is Narayana — the preserver of creation, the eternal Lord Vishnu.\nIn Dwapara Yuga, he descended once more. This time… as Krishna.",
   },
