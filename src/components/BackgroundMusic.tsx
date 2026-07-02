@@ -1,11 +1,14 @@
 import { useEffect, useRef, useState } from "react";
 import songAsset from "@/assets/song.mp3.asset.json";
 
-// Global ref so narration code can duck this audio
+// Global ref so narration / epilogue code can duck this audio
 declare global {
   interface Window {
     __bgMusic?: HTMLAudioElement;
     __bgMusicTargetVolume?: number;
+    __krishnaAudio?: HTMLAudioElement;
+    __activeAudio?: HTMLAudioElement | null;
+    __audioMuted?: boolean;
   }
 }
 
@@ -23,12 +26,14 @@ export function BackgroundMusic() {
     if (typeof window !== "undefined") {
       window.__bgMusic = a;
       window.__bgMusicTargetVolume = 0.7;
+      window.__activeAudio = a;
+      window.__audioMuted = false;
     }
     const tryPlay = () => {
       a.play().then(() => setReady(true)).catch(() => {
-        // autoplay blocked — wait for first user gesture
         const unlock = () => {
-          a.play().then(() => setReady(true)).catch(() => {});
+          const target = window.__activeAudio ?? a;
+          target.play().then(() => setReady(true)).catch(() => {});
           window.removeEventListener("pointerdown", unlock);
           window.removeEventListener("keydown", unlock);
         };
@@ -46,15 +51,14 @@ export function BackgroundMusic() {
   }, []);
 
   function toggle() {
-    const a = audioRef.current;
-    if (!a) return;
-    if (muted) {
-      a.muted = false;
-      a.play().catch(() => {});
-      setMuted(false);
-    } else {
-      a.muted = true;
-      setMuted(true);
+    const next = !muted;
+    setMuted(next);
+    if (typeof window !== "undefined") {
+      window.__audioMuted = next;
+      if (window.__bgMusic) window.__bgMusic.muted = next;
+      if (window.__krishnaAudio) window.__krishnaAudio.muted = next;
+      const active = window.__activeAudio ?? window.__bgMusic;
+      if (!next && active) active.play().catch(() => {});
     }
   }
 
