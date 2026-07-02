@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { enterEpilogue, exitEpilogue } from "@/lib/audio-bus";
 import puppeteer from "@/assets/krishna/KrishnaThePuppeteer.png.asset.json";
 import birth from "@/assets/krishna/KrishnaBirthVideo.mp4.asset.json";
 import lilEyes from "@/assets/krishna/Krishna_s_eyes.mp4.asset.json";
@@ -136,6 +137,7 @@ export default function KrishnaEpilogue() {
 
   useEffect(() => {
     if (!open) return;
+    enterEpilogue();
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "ArrowRight") setIdx((i) => Math.min(last, i + 1));
       if (e.key === "ArrowLeft") setIdx((i) => Math.max(0, i - 1));
@@ -146,6 +148,7 @@ export default function KrishnaEpilogue() {
     return () => {
       window.removeEventListener("keydown", onKey);
       document.body.style.overflow = "";
+      exitEpilogue();
     };
   }, [open, last]);
 
