@@ -54,8 +54,8 @@ const CHAPTERS: Chapter[] = [
   { num: "IV", title: "The Exile", subtitle: "Thirteen years in the forest.", image: ch4.url, effect: "forest", align: "left", tone: "from-emerald-950/40" },
   { num: "V", title: "The Counsel", subtitle: "When the divine takes the reins.", image: ch5.url, effect: "rays", align: "left", tone: "from-amber-900/40" },
   { num: "VI", title: "Vishwarupa", subtitle: "The universe revealed in one form.", image: ch6.url, effect: "cosmos", align: "center", tone: "from-indigo-950/50" },
-  { num: "VII", title: "Kurukshetra", subtitle: "The battle that changed an age.", image: ch7.url, effect: "war", align: "right", tone: "from-slate-950/60" },
-  { num: "VIII", title: "The Coronation", subtitle: "Dharma restored. Peace returns.", image: ch8.url, effect: "petals", align: "center", tone: "from-amber-800/30" },
+  { num: "VII", title: "THE WAR", subtitle: "Kurukshetra: The battle that changed an age.", image: ch7.url, effect: "war", align: "right", tone: "from-slate-950/60" },
+  { num: "VIII", title: "The CROWNING", subtitle: "Dharma restored. Peace returns.", image: ch8.url, effect: "petals", align: "center", tone: "from-amber-800/30" },
 ];
 
 function MahabharataPage() {
@@ -358,9 +358,7 @@ function Ending() {
         ))}
       </div>
       <div className="ending-content relative z-10 flex h-full w-full flex-col items-center justify-center px-6 text-center">
-        <div className="font-display text-[10px] md:text-xs tracking-[0.6em] text-amber-200/70 uppercase mb-8">
-          ॥ Iti ॥
-        </div>
+        
         <h2 className="font-display text-gold-gradient text-5xl md:text-7xl lg:text-8xl leading-tight">
           Yato Dharma<br />Tato Jaya
         </h2>

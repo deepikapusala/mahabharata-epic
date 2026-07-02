@@ -15,7 +15,7 @@ const CARDS: Card[] = [
     icon: "👶",
     parallels: ["Embryo Division", "Artificial Incubation", "Stem Cell Biology"],
     explanation:
-      "The Mahabharata describes Sage Vyasa dividing a single mass into one hundred portions, each developing into a child. Although this is a sacred narrative, it reminds many readers of concepts explored today in embryo division, artificial incubation and developmental biology.",
+    "Instead of a normal pregnancy, a single embryo was split into 100 parts. These parts were kept inside 100 separate jars with special nutrients until they grew into 100 healthy babies.",
     think: "Could ancient storytelling have imagined ideas that resemble modern reproductive science?",
   },
   {
@@ -24,7 +24,7 @@ const CARDS: Card[] = [
     parallels: ["Assisted Reproduction", "Genetic Inheritance", "Donor Conception"],
     explanation:
       "Kunti invoked different deities and each child inherited unique qualities. Today, modern science studies genetics, inheritance and assisted reproductive technologies through entirely different scientific methods.",
-    think: "How do mythology and modern biology each explain extraordinary births?",
+    think: "How did an ancient story map out using an outside donor centuries before fertility clinics existed?",
   },
   {
     heading: "Sanjaya's Divine Vision",
@@ -39,8 +39,8 @@ const CARDS: Card[] = [
     icon: "⚙️",
     parallels: ["Precision Guidance", "Gyroscopic Stability", "Autonomous Targeting"],
     explanation:
-      "Krishna's Sudarshana Chakra is described as returning after striking its target. Its legendary characteristics invite comparisons with modern concepts such as guided systems and rotational stability.",
-    think: "Could ancient imagination envision a perfectly controlled weapon long before modern engineering?",
+      "Once a target is locked, this celestial disc tracks them across any distance, slicing clean through the target before effortlessly reversing its path to return safely to its sender.",
+    think: "It revolves at a staggering, hyper-sonic RPM. If touching a simple household ceiling fan splits a human finger open instantly, how did Krishna physically summon, wield, and catch a blazing weapon of supreme kinetic energy without tearing his hands to pieces?",
   },
   {
     heading: "Brahmastra",
@@ -51,28 +51,20 @@ const CARDS: Card[] = [
     think: "Does true strength lie in possessing power—or in choosing not to use it?",
   },
   {
-    heading: "Pushpaka Vimana",
+    heading: "Vimana",
     icon: "✈️",
     parallels: ["Aircraft", "Autonomous Flight", "Aerial Transportation"],
     explanation:
       "The Pushpaka Vimana is described as a flying vehicle capable of transporting passengers. Its depiction naturally invites comparisons with modern aviation and autonomous flight concepts.",
-    think: "How does imagination inspire technological innovation?",
+    think: "How did they build a ship that changes its physical size on the inside?",
   },
   {
     heading: "Maya Sabha",
     icon: "🪞",
-    parallels: ["Optical Illusions", "Immersive Architecture", "Augmented Reality"],
+    parallels: ["Optical Illusions", "Immersive Architecture", "Augmented Reality (AR)","Virtual Reality (VR)"],
     explanation:
       "The Maya Sabha confused visitors with astonishing visual effects and deceptive architecture. Modern technology similarly creates immersive experiences using projection, smart surfaces and augmented reality.",
     think: "Can architecture itself become an illusion?",
-  },
-  {
-    heading: "Vishwarupa",
-    icon: "🌌",
-    parallels: ["Cosmology", "Universe Visualization", "Astronomical Simulation"],
-    explanation:
-      "Arjuna witnessed Krishna's universal form containing countless worlds and dimensions. Today scientists create visual models of galaxies, cosmic structures and the observable universe to better understand existence.",
-    think: "Can imagination help us understand the universe before science explains it?",
   },
   {
     heading: "Krishna's Strategy",
@@ -87,8 +79,8 @@ const CARDS: Card[] = [
     icon: "🛡️",
     parallels: ["Autonomous Defense Systems", "Target Recognition", "Smart Weapons"],
     explanation:
-      "The Narayana Astra responded differently depending on the actions of those facing it. Its legendary behaviour reminds many readers of adaptive defence systems that respond to changing conditions.",
-    think: "How close can modern technology come to intelligent decision-making?",
+    "When unleashed, it fires a relentless, escalating barrage of missiles that intensifies the more an army tries to resist or fight back. It only de-escalates and shuts down completely when the targets totally surrender and lay down their arms.",
+    think: "How did ancient technology calculate real-time human psychological surrender to automatically trigger a firing override?",
   },
 ];
 
@@ -177,12 +169,11 @@ export default function WisdomTech() {
       <div className="relative z-10 h-full w-full flex flex-col items-center justify-center px-4 md:px-8">
         <div className="text-center max-w-4xl mb-8 md:mb-10">
           <h2 className="font-display text-white text-3xl md:text-5xl lg:text-6xl leading-tight drop-shadow-[0_4px_24px_rgba(0,0,0,0.7)]">
-            Could Ancient Wisdom Inspire Modern Technology?
+            History or Tomorrow??
           </h2>
           <p className="mt-4 text-cyan-100/85 text-sm md:text-base leading-relaxed">
-            Some events described in the Mahabharata continue to inspire fascinating comparisons with ideas explored by modern science and technology.
-            <br />
-            <span className="text-cyan-200/70 italic">These are thoughtful interpretations meant to encourage curiosity—not historical proof.</span>
+            Mythological wonders, or forgotten physics?? Look closer.....You aren't just reading history; you’re witnessing a preview of our own technological horizon. <br />
+            <span className="text-cyan-200/70 italic"></span>
           </p>
         </div>
 

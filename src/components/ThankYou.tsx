@@ -1,15 +1,15 @@
 import { useState } from "react";
 
-const WHATSAPP_NUMBER = ""; // e.g. "919999999999" — provided later
-const EMAIL_URL = "#";
-const LINKEDIN_URL = "#";
-const GITHUB_URL = "#";
+const WHATSAPP_NUMBER = "919032341973"; // e.g. "919999999999" — provided later
+const EMAIL_URL = "mailto:deepikappusala@gmail.com";
+const LINKEDIN_URL = "https://www.linkedin.com/in/deepika-pusala/";
+const GITHUB_URL = "https://github.com/deepikapusala";
 
 export default function ThankYou() {
   const [msg, setMsg] = useState("");
 
   function sendFeedback() {
-    const body = `Hi Deepika,\n\nI just experienced your Mahabharata website.\n\nMy feedback is:\n${msg.trim() || "[User's message]"}\n\nThank you for creating this experience.`;
+    const body = `Hi Deepika,\nI just experienced your Mahabharata website.\n${msg.trim() || "[User's message]"}`;
     const url = WHATSAPP_NUMBER
       ? `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(body)}`
       : `https://wa.me/?text=${encodeURIComponent(body)}`;
@@ -50,10 +50,10 @@ export default function ThankYou() {
         {/* Title */}
         <div>
           <div className="font-display text-[10px] md:text-xs tracking-[0.6em] text-cyan-100/70 uppercase mb-5">
-            ॥ Dhanyavaad ॥
+            ॥ THANKYOU ॥
           </div>
           <h2 className="font-display text-4xl sm:text-5xl md:text-6xl leading-[1.05] uppercase tracking-wide bg-gradient-to-br from-amber-100 via-cyan-100 to-violet-200 bg-clip-text text-transparent drop-shadow-[0_0_28px_rgba(125,211,252,0.25)]">
-            Thank You for Experiencing<br />the Mahabharata
+            Thank You for Experiencing<br />
           </h2>
           <div className="mx-auto mt-6 h-px w-32 bg-gradient-to-r from-transparent via-cyan-200/70 to-transparent" />
           <p className="mt-6 font-display italic text-base md:text-xl text-cyan-50/85 leading-relaxed">
@@ -73,7 +73,6 @@ export default function ThankYou() {
           </h3>
           <div className="mt-4 space-y-1 text-cyan-50/85 text-sm md:text-base font-light">
             <div>Information Science Engineering Student</div>
-            <div className="text-amber-100/90">IEEE ITS Chair</div>
             <div className="tracking-[0.25em] text-xs md:text-sm text-cyan-100/70 uppercase mt-2">
               AI · IoT · Web Development
             </div>
