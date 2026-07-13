@@ -74,7 +74,7 @@ export default function ThankYou() {
           <div className="mt-4 space-y-1 text-cyan-50/85 text-sm md:text-base font-light">
             <div>Information Science Engineering Student</div>
             <div className="tracking-[0.25em] text-xs md:text-sm text-cyan-100/70 uppercase mt-2">
-              AI · IoT · Web Development
+              AI · UI&UX · Web Development
             </div>
           </div>
           <div className="mt-7 flex items-center justify-center gap-4">
